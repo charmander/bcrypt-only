@@ -1,0 +1,158 @@
+# from https://github.com/pyca/bcrypt/blob/3.1.7/tests/test_bcrypt.py
+#
+# Copyright 2013 Donald Stufft
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+[
+	(
+		b"Kk4DQuMMfZL9o",
+		b"$2b$04$cVWp4XaNU8a4v1uMRum2SO",
+		b"$2b$04$cVWp4XaNU8a4v1uMRum2SO026BWLIoQMD/TXg5uZV.0P.uO8m3YEm",
+	),
+	(
+		b"9IeRXmnGxMYbs",
+		b"$2b$04$pQ7gRO7e6wx/936oXhNjrO",
+		b"$2b$04$pQ7gRO7e6wx/936oXhNjrOUNOHL1D0h1N2IDbJZYs.1ppzSof6SPy",
+	),
+	(
+		b"xVQVbwa1S0M8r",
+		b"$2b$04$SQe9knOzepOVKoYXo9xTte",
+		b"$2b$04$SQe9knOzepOVKoYXo9xTteNYr6MBwVz4tpriJVe3PNgYufGIsgKcW",
+	),
+	(
+		b"Zfgr26LWd22Za",
+		b"$2b$04$eH8zX.q5Q.j2hO1NkVYJQO",
+		b"$2b$04$eH8zX.q5Q.j2hO1NkVYJQOM6KxntS/ow3.YzVmFrE4t//CoF4fvne",
+	),
+	(
+		b"Tg4daC27epFBE",
+		b"$2b$04$ahiTdwRXpUG2JLRcIznxc.",
+		b"$2b$04$ahiTdwRXpUG2JLRcIznxc.s1.ydaPGD372bsGs8NqyYjLY1inG5n2",
+	),
+	(
+		b"xhQPMmwh5ALzW",
+		b"$2b$04$nQn78dV0hGHf5wUBe0zOFu",
+		b"$2b$04$nQn78dV0hGHf5wUBe0zOFu8n07ZbWWOKoGasZKRspZxtt.vBRNMIy",
+	),
+	(
+		b"59je8h5Gj71tg",
+		b"$2b$04$cvXudZ5ugTg95W.rOjMITu",
+		b"$2b$04$cvXudZ5ugTg95W.rOjMITuM1jC0piCl3zF5cmGhzCibHZrNHkmckG",
+	),
+	(
+		b"wT4fHJa2N9WSW",
+		b"$2b$04$YYjtiq4Uh88yUsExO0RNTu",
+		b"$2b$04$YYjtiq4Uh88yUsExO0RNTuEJ.tZlsONac16A8OcLHleWFjVawfGvO",
+	),
+	(
+		b"uSgFRnQdOgm4S",
+		b"$2b$04$WLTjgY/pZSyqX/fbMbJzf.",
+		b"$2b$04$WLTjgY/pZSyqX/fbMbJzf.qxCeTMQOzgL.CimRjMHtMxd/VGKojMu",
+	),
+	(
+		b"tEPtJZXur16Vg",
+		b"$2b$04$2moPs/x/wnCfeQ5pCheMcu",
+		b"$2b$04$2moPs/x/wnCfeQ5pCheMcuSJQ/KYjOZG780UjA/SiR.KsYWNrC7SG",
+	),
+	(
+		b"vvho8C6nlVf9K",
+		b"$2b$04$HrEYC/AQ2HS77G78cQDZQ.",
+		b"$2b$04$HrEYC/AQ2HS77G78cQDZQ.r44WGcruKw03KHlnp71yVQEwpsi3xl2",
+	),
+	(
+		b"5auCCY9by0Ruf",
+		b"$2b$04$vVYgSTfB8KVbmhbZE/k3R.",
+		b"$2b$04$vVYgSTfB8KVbmhbZE/k3R.ux9A0lJUM4CZwCkHI9fifke2.rTF7MG",
+	),
+	(
+		b"GtTkR6qn2QOZW",
+		b"$2b$04$JfoNrR8.doieoI8..F.C1O",
+		b"$2b$04$JfoNrR8.doieoI8..F.C1OQgwE3uTeuardy6lw0AjALUzOARoyf2m",
+	),
+	(
+		b"zKo8vdFSnjX0f",
+		b"$2b$04$HP3I0PUs7KBEzMBNFw7o3O",
+		b"$2b$04$HP3I0PUs7KBEzMBNFw7o3O7f/uxaZU7aaDot1quHMgB2yrwBXsgyy",
+	),
+	(
+		b"I9VfYlacJiwiK",
+		b"$2b$04$xnFVhJsTzsFBTeP3PpgbMe",
+		b"$2b$04$xnFVhJsTzsFBTeP3PpgbMeMREb6rdKV9faW54Sx.yg9plf4jY8qT6",
+	),
+	(
+		b"VFPO7YXnHQbQO",
+		b"$2b$04$WQp9.igoLqVr6Qk70mz6xu",
+		b"$2b$04$WQp9.igoLqVr6Qk70mz6xuRxE0RttVXXdukpR9N54x17ecad34ZF6",
+	),
+	(
+		b"VDx5BdxfxstYk",
+		b"$2b$04$xgZtlonpAHSU/njOCdKztO",
+		b"$2b$04$xgZtlonpAHSU/njOCdKztOPuPFzCNVpB4LGicO4/OGgHv.uKHkwsS",
+	),
+	(
+		b"dEe6XfVGrrfSH",
+		b"$2b$04$2Siw3Nv3Q/gTOIPetAyPr.",
+		b"$2b$04$2Siw3Nv3Q/gTOIPetAyPr.GNj3aO0lb1E5E9UumYGKjP9BYqlNWJe",
+	),
+	(
+		b"cTT0EAFdwJiLn",
+		b"$2b$04$7/Qj7Kd8BcSahPO4khB8me",
+		b"$2b$04$7/Qj7Kd8BcSahPO4khB8me4ssDJCW3r4OGYqPF87jxtrSyPj5cS5m",
+	),
+	(
+		b"J8eHUDuxBB520",
+		b"$2b$04$VvlCUKbTMjaxaYJ.k5juoe",
+		b"$2b$04$VvlCUKbTMjaxaYJ.k5juoecpG/7IzcH1AkmqKi.lIZMVIOLClWAk.",
+	),
+	(
+		b"U*U",
+		b"$2a$05$CCCCCCCCCCCCCCCCCCCCC.",
+		b"$2a$05$CCCCCCCCCCCCCCCCCCCCC.E5YPO9kmyuRGyh0XouQYb4YMJKvyOeW",
+	),
+	(
+		b"U*U*",
+		b"$2a$05$CCCCCCCCCCCCCCCCCCCCC.",
+		b"$2a$05$CCCCCCCCCCCCCCCCCCCCC.VGOzA784oUp/Z0DY336zx7pLYAy0lwK",
+	),
+	(
+		b"U*U*U",
+		b"$2a$05$XXXXXXXXXXXXXXXXXXXXXO",
+		b"$2a$05$XXXXXXXXXXXXXXXXXXXXXOAcXxm9kjPGEMsLznoKqmqw7tc8WCx4a",
+	),
+	(
+		b"0123456789abcdefghijklmnopqrstuvwxyz"
+		b"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+		#b"chars after 72 are ignored"
+		,
+		b"$2a$05$abcdefghijklmnopqrstuu",
+		b"$2a$05$abcdefghijklmnopqrstuu5s2v8.iXieOjg/.AySBTTZIIVFJeBui",
+	),
+	(
+		b"\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa"
+		b"\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa"
+		b"\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa"
+		b"\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa"
+		b"\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa"
+		b"\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa\xaa"
+		#b"chars after 72 are ignored as usual"
+		,
+		b"$2a$05$/OK.fbVrR/bpIqNJ5ianF.",
+		b"$2a$05$/OK.fbVrR/bpIqNJ5ianF.swQOIzjOiJ9GHEPuhEkvqrUyvWhEMx6"
+	),
+	(
+		b"\xa3",
+		b"$2a$05$/OK.fbVrR/bpIqNJ5ianF.",
+		b"$2a$05$/OK.fbVrR/bpIqNJ5ianF.Sa7shbm4.OzKpvFnX1pQLmQW96oUlCq"
+	),
+]

@@ -1,0 +1,18 @@
+[package]
+name = 'bcrypt-only'
+version = '0.1.0'
+edition = '2018'
+
+authors = ['Charmander <~@charmander.me>']
+license = 'ISC'
+description = 'A low-level bcrypt function in safe Rust.'
+keywords = ['bcrypt', 'hash']
+categories = ['cryptography', 'no-std']
+repository = 'https://github.com/charmander/bcrypt-only'
+
+readme = 'README.md'
+
+include = [
+	'src/lib.rs',
+	'src/sbox-init.in',
+]
