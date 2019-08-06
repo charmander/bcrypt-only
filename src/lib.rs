@@ -3,6 +3,15 @@
 #[cfg(test)]
 mod tests;
 
+/// The maximum number of bytes in a bcrypt key.
+pub const KEY_SIZE_MAX: usize = 72;
+
+/// The number of bytes in a bcrypt salt.
+pub const SALT_SIZE: usize = 16;
+
+/// The number of bytes in a bcrypt hash.
+pub const HASH_SIZE: usize = 23;
+
 /// A bcrypt work factor.
 #[derive(Clone, Copy, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
 pub struct WorkFactor(u32);
@@ -25,7 +34,7 @@ pub struct Salt {
 
 impl Salt {
 	/// Creates a bcrypt salt from any 16 bytes.
-	pub fn from_bytes(bytes: &[u8; 16]) -> Self {
+	pub fn from_bytes(bytes: &[u8; SALT_SIZE]) -> Self {
 		let mut be = [0_u32; 4];
 
 		for i in 0..4 {
@@ -41,7 +50,7 @@ impl Salt {
 	}
 
 	/// Gets the bytes making up a bcrypt salt.
-	pub fn to_bytes(&self) -> [u8; 16] {
+	pub fn to_bytes(&self) -> [u8; SALT_SIZE] {
 		let mut bytes = [0_u8; 16];
 
 		for (b, w) in bytes.chunks_exact_mut(4).zip(self.be.iter().copied()) {
@@ -222,8 +231,8 @@ fn blowfish_expandstate_data0(c: &mut BlowfishContext) {
 }
 
 /// Hashes a key and salt with bcrypt according to a work factor. The key can’t be longer than 72 bytes and can’t contain a 0 byte.
-pub fn bcrypt(key: &[u8], salt: &Salt, work_factor: WorkFactor) -> Result<[u8; 23], BcryptError> {
-	if key.len() > 72 {
+pub fn bcrypt(key: &[u8], salt: &Salt, work_factor: WorkFactor) -> Result<[u8; HASH_SIZE], BcryptError> {
+	if key.len() > KEY_SIZE_MAX {
 		return Err(BcryptError::Length);
 	}
 
