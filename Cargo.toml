@@ -17,3 +17,6 @@ include = [
 	'src/lib.rs',
 	'src/sbox-init.in',
 ]
+
+[features]
+std = []
