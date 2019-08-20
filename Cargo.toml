@@ -8,6 +8,7 @@ license = 'ISC'
 description = 'A low-level bcrypt function in safe Rust.'
 keywords = ['bcrypt', 'hash']
 categories = ['cryptography', 'no-std']
+documentation = 'https://docs.rs/bcrypt-only/'
 repository = 'https://github.com/charmander/bcrypt-only'
 
 readme = 'README.md'
