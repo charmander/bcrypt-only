@@ -62,6 +62,35 @@ impl Salt {
 }
 
 impl WorkFactor {
+	pub const EXP4: Self = Self(4);
+	pub const EXP5: Self = Self(5);
+	pub const EXP6: Self = Self(6);
+	pub const EXP7: Self = Self(7);
+	pub const EXP8: Self = Self(8);
+	pub const EXP9: Self = Self(9);
+	pub const EXP10: Self = Self(10);
+	pub const EXP11: Self = Self(11);
+	pub const EXP12: Self = Self(12);
+	pub const EXP13: Self = Self(13);
+	pub const EXP14: Self = Self(14);
+	pub const EXP15: Self = Self(15);
+	pub const EXP16: Self = Self(16);
+	pub const EXP17: Self = Self(17);
+	pub const EXP18: Self = Self(18);
+	pub const EXP19: Self = Self(19);
+	pub const EXP20: Self = Self(20);
+	pub const EXP21: Self = Self(21);
+	pub const EXP22: Self = Self(22);
+	pub const EXP23: Self = Self(23);
+	pub const EXP24: Self = Self(24);
+	pub const EXP25: Self = Self(25);
+	pub const EXP26: Self = Self(26);
+	pub const EXP27: Self = Self(27);
+	pub const EXP28: Self = Self(28);
+	pub const EXP29: Self = Self(29);
+	pub const EXP30: Self = Self(30);
+	pub const EXP31: Self = Self(31);
+
 	/// Creates a bcrypt work factor from a typical base-2 exponent between 4 and 31 (inclusive). The number of rounds is 2\*\*`log_rounds`.
 	pub fn exp(log_rounds: u32) -> Option<Self> {
 		if log_rounds >= 4 && log_rounds <= 31 {
