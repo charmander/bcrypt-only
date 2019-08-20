@@ -1,5 +1,10 @@
 #![no_std]
 
+#[cfg(feature = "std")]
+extern crate std;
+
+use core::fmt;
+
 #[cfg(test)]
 mod tests;
 
@@ -25,6 +30,18 @@ pub enum BcryptError {
 	/// The key contained a 0 byte.
 	ZeroByte,
 }
+
+impl fmt::Display for BcryptError {
+	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+		write!(f, "{}", match self {
+			BcryptError::Length => "password too long",
+			BcryptError::ZeroByte => "password contains a NUL character",
+		})
+	}
+}
+
+#[cfg(feature = "std")]
+impl std::error::Error for BcryptError {}
 
 /// A bcrypt salt.
 #[derive(Clone, Debug)]
